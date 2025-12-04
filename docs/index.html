@@ -171,8 +171,7 @@
             border-bottom: 1px solid var(--border-color);
         }
 
-        th:nth-child(2),
-        th:nth-child(3) {
+        th {
             text-align: center;
         }
 
@@ -180,10 +179,6 @@
             padding: 10px 16px;
             border-bottom: 1px solid var(--border-color);
             vertical-align: middle;
-        }
-
-        td:nth-child(2),
-        td:nth-child(3) {
             text-align: center;
         }
 
@@ -493,7 +488,7 @@
             for (const app of apps) {
                 const row = document.createElement('tr');
                 const envClass = app.env === 'production' ? 'badge-production' : 'badge-beta';
-                const envLabel = app.env === 'production' ? 'Production' : 'Beta';
+                const envLabel = app.env === 'production' ? 'Product' : 'Beta';
                 
                 row.innerHTML = `
                     <td>
