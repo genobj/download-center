@@ -1,0 +1,20 @@
+Package: slv
+Version: 0.1.0-1
+Architecture: amd64
+Maintainer: POLLUX.ai <dev@pollux.ai>
+Installed-Size: 1890
+Depends: libc6 (>= 2.34)
+Filename: releases/slv_0.0.1-beta_amd64.deb
+Size: 619812
+MD5sum: 1f43ccf9771bb4601ec85091e4739093
+SHA1: bf71aa1fb360a860a7249c40e0156fb807d26789
+SHA256: f37527f8bf7e29d6269087788edb9ec6f8b2b76989f6f92507e51f3c4c3e5772
+Section: utils
+Priority: optional
+Homepage: https://github.com/genobj/ergon-sullivan
+Description: AI Agent를 위한 가이드라인 CLI 도구
+ Sullivan(slv)은 AI Agent를 위한 가이드라인 문서 조회
+ 도구입니다.
+ 프로젝트의 코딩 규칙, 패턴, 지침을 Agent가 쉽게 조회할 수
+ 있도록 지원합니다.
+
