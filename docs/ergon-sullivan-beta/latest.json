@@ -1,7 +1,7 @@
 {
   "version": "0.0.1-beta",
   "notes": "Beta release v0.0.1-beta",
-  "pub_date": "2025-12-04T19:23:34Z",
+  "pub_date": "2025-12-04T19:33:27Z",
   "platforms": {
     "linux-x86_64": {
       "url": "https://github.com/genobj/ergon-sullivan/releases/download/v0.0.1-beta/slv-linux-x64",
