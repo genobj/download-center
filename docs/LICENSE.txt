@@ -1,0 +1,62 @@
+POLLUX.ai General License
+
+Copyright (c) 2025 POLLUX.ai. All rights reserved.
+
+1. Ownership
+   All ownership rights to this program and all related source code, documentation, 
+   and materials belong to POLLUX.ai. This license does not transfer ownership and 
+   does not grant any intellectual property rights to the user.
+
+2. License Grant
+   This program may only be used by users who have received explicit written 
+   permission from POLLUX.ai. Users without permission may not use, copy, modify, 
+   distribute, sell, or otherwise utilize this program in any way.
+
+3. Use Restrictions
+   Authorized users may not:
+   a) Attempt to reverse engineer, decompile, or disassemble this program
+   b) Redistribute, resell, or sublicense any part or all of this program to third parties
+   c) Use this program for commercial purposes (without separate written permission from POLLUX.ai)
+   d) Use this program to conduct illegal or inappropriate activities
+
+4. Disclaimer of Warranty
+   This program is provided "AS IS" without any express or implied warranties. 
+   POLLUX.ai makes no warranties regarding the quality, performance, suitability, 
+   or fitness for a particular purpose of this program.
+
+5. Limitation of Liability
+   POLLUX.ai shall not be liable for any damages, losses, costs, claims, lawsuits, 
+   legal liabilities, or any type of issues arising from the user's use of this program, 
+   including but not limited to direct, indirect, incidental, special, consequential, 
+   or punitive damages.
+   
+   This includes, but is not limited to:
+   - Data loss or corruption
+   - Loss of revenue or business opportunities
+   - System malfunction or failure
+   - Security breaches or privacy violations
+   - Damages to third parties
+
+6. Indemnification
+   The user agrees to indemnify and hold harmless POLLUX.ai, its officers, employees, 
+   agents, and affiliates from all claims, damages, liabilities, costs, and expenses 
+   (including reasonable attorney's fees) arising from the use, misuse, or inability 
+   to use this program.
+
+7. Termination
+   If the user violates any terms of this license, POLLUX.ai may immediately terminate 
+   this license, and the user must immediately cease use of this program and destroy 
+   all copies.
+
+8. Miscellaneous
+   a) This license shall be interpreted and governed by the laws of the Republic of Korea.
+   b) If any provision of this license is invalid or unenforceable, the remaining 
+      provisions shall remain in effect.
+   c) POLLUX.ai may modify this license without prior notice, and the modified license 
+      shall take effect from the time it is posted on the POLLUX.ai website.
+   d) This license constitutes the entire agreement between POLLUX.ai and the user 
+      and supersedes all prior agreements on this subject.
+
+For inquiries, please contact POLLUX.ai.
+
+

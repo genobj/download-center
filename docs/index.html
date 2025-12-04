@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POLLUX Download Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-card: #141414;
+            --bg-hover: #1a1a1a;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1a1;
+            --text-muted: #666666;
+            --border-color: #262626;
+            --accent-primary: #818cf8;
+            --accent-hover: #6366f1;
+            --badge-production: #818cf8;
+            --badge-beta: #fbbf24;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            font-size: 14px;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding: 0 24px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 720px;
+            margin: 0 auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-primary);
+        }
+
+        .header-link {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .header-link:hover {
+            color: var(--text-primary);
+        }
+
+        main {
+            flex: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 32px 24px;
+            width: 100%;
+        }
+
+        .page-header {
+            margin-bottom: 24px;
+        }
+
+        .page-title {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        .page-subtitle {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .license-banner {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.2);
+            border-radius: 6px;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .license-banner svg {
+            width: 16px;
+            height: 16px;
+            color: #fbbf24;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .license-banner p {
+            color: #fbbf24;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .license-banner a {
+            color: #fcd34d;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .license-banner a:hover {
+            text-decoration: underline;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+
+        th {
+            padding: 10px 16px;
+            text-align: left;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th:nth-child(2),
+        th:nth-child(3) {
+            text-align: center;
+        }
+
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: middle;
+        }
+
+        td:nth-child(2),
+        td:nth-child(3) {
+            text-align: center;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: var(--bg-hover);
+        }
+
+        .app-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-weight: 500;
+            transition: color 0.15s;
+        }
+
+        .app-link:hover {
+            color: var(--accent-primary);
+        }
+
+        .app-link svg {
+            width: 12px;
+            height: 12px;
+            opacity: 0.4;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .badge-production {
+            background: rgba(129, 140, 248, 0.15);
+            color: var(--badge-production);
+        }
+
+        .badge-beta {
+            background: rgba(251, 191, 36, 0.15);
+            color: var(--badge-beta);
+        }
+
+        .version {
+            font-family: 'Geist Mono', 'SF Mono', monospace;
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 6px;
+            justify-content: flex-start;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.15s;
+            border: 1px solid transparent;
+        }
+
+        .download-btn svg {
+            width: 12px;
+            height: 12px;
+        }
+
+        .download-btn.active {
+            background: var(--accent-primary);
+            color: #0a0a0a;
+        }
+
+        .download-btn.active:hover {
+            background: var(--accent-hover);
+        }
+
+        .download-btn.inactive {
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            border-color: var(--border-color);
+        }
+
+        .license-section {
+            margin-top: 20px;
+        }
+
+        .license-toggle {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: border-color 0.15s;
+            font-size: 13px;
+        }
+
+        .license-toggle:hover {
+            border-color: var(--accent-primary);
+        }
+
+        .license-toggle h3 {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .license-toggle h3 svg {
+            width: 14px;
+            height: 14px;
+            color: var(--accent-primary);
+        }
+
+        .license-toggle .chevron {
+            width: 16px;
+            height: 16px;
+            color: var(--text-muted);
+            transition: transform 0.2s;
+        }
+
+        .license-toggle.expanded {
+            border-radius: 8px 8px 0 0;
+            border-bottom: none;
+        }
+
+        .license-toggle.expanded .chevron {
+            transform: rotate(180deg);
+        }
+
+        .license-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+        }
+
+        .license-content.expanded {
+            max-height: 2000px;
+        }
+
+        .license-content pre {
+            padding: 16px;
+            font-family: 'Geist Mono', monospace;
+            font-size: 11px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 0;
+            background: var(--bg-secondary);
+            border-radius: 0 0 7px 7px;
+        }
+
+        footer {
+            padding: 16px 24px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--text-primary);
+        }
+
+        @media (max-width: 640px) {
+            main {
+                padding: 20px 16px;
+            }
+
+            th, td {
+                padding: 8px 12px;
+            }
+
+            .download-buttons {
+                flex-wrap: wrap;
+            }
+
+            .download-btn {
+                padding: 3px 8px;
+                font-size: 11px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="https://pollux.ai" class="logo">POLL<span>UX</span></a>
+            <a href="https://pollux.ai" class="header-link">← pollux.ai</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="page-header">
+            <h1 class="page-title">Download Center</h1>
+            <p class="page-subtitle">Download the latest POLLUX applications for your platform.</p>
+        </div>
+
+        <div class="license-banner">
+            <svg viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd"/>
+            </svg>
+            <p>By downloading software from this page, you agree to the <a href="LICENSE.txt" target="_blank">POLLUX.ai License</a>. This software requires written permission for use.</p>
+        </div>
+
+        <div class="card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Application</th>
+                        <th>Environment</th>
+                        <th>Version</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody id="app-table"></tbody>
+            </table>
+        </div>
+
+        <div class="license-section">
+            <button class="license-toggle" onclick="toggleLicense()">
+                <h3>
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 2a.75.75 0 01.75.75v.258a33.186 33.186 0 016.668.83.75.75 0 01-.336 1.461 31.28 31.28 0 00-1.103-.232l1.702 7.545a.75.75 0 01-.387.832A4.981 4.981 0 0115 14c-.825 0-1.606-.2-2.294-.556a.75.75 0 01-.387-.832l1.77-7.849a31.743 31.743 0 00-3.339-.254v11.505l5.25.006a.75.75 0 010 1.5H4a.75.75 0 010-1.5l5.25-.006V4.509a31.743 31.743 0 00-3.339.254l1.77 7.849a.75.75 0 01-.387.832A4.981 4.981 0 015 14c-.825 0-1.606-.2-2.294-.556a.75.75 0 01-.387-.832l1.702-7.545c-.372.068-.741.14-1.103.232a.75.75 0 01-.336-1.461 33.186 33.186 0 016.668-.83V2.75A.75.75 0 0110 2z" clip-rule="evenodd"/>
+                    </svg>
+                    License Agreement
+                </h3>
+                <svg class="chevron" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/>
+                </svg>
+            </button>
+            <div class="license-content" id="license-content">
+                <pre id="license-text">Loading...</pre>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p><a href="https://pollux.ai">© 2025 POLLUX.ai</a> · All rights reserved</p>
+    </footer>
+
+    <script>
+        const apps = [
+            { name: 'ergon-markdown', path: 'ergon-markdown', env: 'production' },
+            { name: 'ergon-markdown', path: 'ergon-markdown-beta', env: 'beta' },
+            { name: 'ergon-sullivan', path: 'ergon-sullivan', env: 'production' },
+            { name: 'ergon-sullivan', path: 'ergon-sullivan-beta', env: 'beta' },
+            { name: 'ergon-vibe', path: 'ergon-vibe', env: 'production' },
+            { name: 'ergon-vibe', path: 'ergon-vibe-beta', env: 'beta' },
+        ];
+
+        const icons = {
+            external: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`,
+            windows: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>`,
+            linux: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.311.002-.465.006-.637.019-1.267.097-1.867.243a5.182 5.182 0 00-1.583.578c-.876.477-1.567 1.19-1.993 2.094-.366.778-.529 1.6-.529 2.577 0 .656.062 1.293.186 1.904.124.613.316 1.195.574 1.752.27.566.6 1.1.989 1.6l.093.115c.252.32.487.648.694.99.21.345.387.702.527 1.071.146.381.255.774.322 1.173.069.409.099.824.09 1.242a8.924 8.924 0 01-.199 1.502 8.12 8.12 0 01-.457 1.43 7.362 7.362 0 01-.684 1.27 9.99 9.99 0 01-.448.592l.007.014c.072.126.183.208.31.238.126.029.26.01.373-.058l.048-.03a5.324 5.324 0 00.584-.45c.184-.164.357-.34.518-.529.162-.189.311-.389.449-.6.138-.21.264-.43.377-.657.113-.228.215-.463.303-.706.089-.242.165-.492.228-.747.063-.256.113-.517.15-.781.037-.265.061-.533.072-.804.012-.272.01-.546-.005-.82-.015-.274-.043-.548-.083-.821-.04-.273-.095-.545-.16-.815-.066-.271-.145-.539-.234-.802-.09-.264-.19-.524-.303-.779a7.987 7.987 0 00-.368-.74 8.926 8.926 0 00-.433-.693l-.09-.126c-.39-.502-.72-1.04-.948-1.614a4.911 4.911 0 01-.368-1.904c0-.646.116-1.286.347-1.891a4.63 4.63 0 01.98-1.649 4.483 4.483 0 011.498-1.208 4.932 4.932 0 011.804-.585c.343-.042.688-.063 1.034-.063.346 0 .691.021 1.034.063.628.077 1.234.261 1.804.585a4.483 4.483 0 011.498 1.208c.42.487.753 1.049.98 1.649.231.605.347 1.245.347 1.891 0 .647-.126 1.289-.368 1.904-.228.574-.558 1.112-.948 1.614l-.09.126a8.926 8.926 0 00-.433.693 7.987 7.987 0 00-.368.74c-.113.255-.213.515-.303.779-.089.263-.168.531-.234.802-.065.27-.12.542-.16.815-.04.273-.068.547-.083.821a9.556 9.556 0 00-.005.82c.011.271.035.539.072.804.037.264.087.525.15.781.063.255.139.505.228.747.088.243.19.478.303.706.113.227.239.447.377.657.138.211.287.411.449.6.161.189.334.365.518.529.184.164.38.315.584.45l.048.03c.113.068.247.087.373.058a.439.439 0 00.31-.238l.007-.014a9.99 9.99 0 01-.448-.592 7.362 7.362 0 01-.684-1.27 8.12 8.12 0 01-.457-1.43 8.924 8.924 0 01-.199-1.502c-.009-.418.021-.833.09-1.242.067-.399.176-.792.322-1.173.14-.369.317-.726.527-1.071.207-.342.442-.67.694-.99l.093-.115c.389-.5.719-1.034.989-1.6.258-.557.45-1.139.574-1.752.124-.611.186-1.248.186-1.904 0-.977-.163-1.799-.529-2.577-.426-.904-1.117-1.617-1.993-2.094a5.182 5.182 0 00-1.583-.578 9.24 9.24 0 00-1.867-.243A9.242 9.242 0 0012.504 0z"/></svg>`,
+            mac: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></svg>`,
+        };
+
+        function createDownloadButton(platform, url) {
+            const labels = { win: 'Windows', linux: 'Linux', mac: 'macOS' };
+            const iconMap = { win: 'windows', linux: 'linux', mac: 'mac' };
+            
+            if (!url) {
+                return `<span class="download-btn inactive">${icons[iconMap[platform]]} ${labels[platform]}</span>`;
+            }
+            return `<a href="${url}" class="download-btn active">${icons[iconMap[platform]]} ${labels[platform]}</a>`;
+        }
+
+        function getPlatformUrl(platforms, key) {
+            if (!platforms) return null;
+            return platforms[key]?.url || null;
+        }
+
+        async function loadAppData() {
+            const tbody = document.getElementById('app-table');
+            
+            for (const app of apps) {
+                const row = document.createElement('tr');
+                const envClass = app.env === 'production' ? 'badge-production' : 'badge-beta';
+                const envLabel = app.env === 'production' ? 'Production' : 'Beta';
+                
+                row.innerHTML = `
+                    <td>
+                        <a href="${app.path}/latest.json" class="app-link" target="_blank">
+                            ${app.name} ${icons.external}
+                        </a>
+                    </td>
+                    <td><span class="badge ${envClass}">${envLabel}</span></td>
+                    <td class="version">—</td>
+                    <td class="download-buttons">—</td>
+                `;
+                tbody.appendChild(row);
+
+                try {
+                    const response = await fetch(`${app.path}/latest.json`);
+                    if (response.ok) {
+                        const data = await response.json();
+                        row.querySelector('.version').textContent = data.version || '—';
+                        
+                        const winUrl = getPlatformUrl(data.platforms, 'windows-x86_64');
+                        const linuxUrl = getPlatformUrl(data.platforms, 'linux-x86_64');
+                        const macUrl = getPlatformUrl(data.platforms, 'darwin-x86_64') || getPlatformUrl(data.platforms, 'darwin-aarch64');
+                        
+                        row.querySelector('.download-buttons').innerHTML = `
+                            ${createDownloadButton('win', winUrl)}
+                            ${createDownloadButton('linux', linuxUrl)}
+                            ${createDownloadButton('mac', macUrl)}
+                        `;
+                    } else {
+                        throw new Error('Not found');
+                    }
+                } catch (e) {
+                    row.querySelector('.version').textContent = '—';
+                    row.querySelector('.download-buttons').innerHTML = `
+                        ${createDownloadButton('win', null)}
+                        ${createDownloadButton('linux', null)}
+                        ${createDownloadButton('mac', null)}
+                    `;
+                }
+            }
+        }
+
+        loadAppData();
+
+        function toggleLicense() {
+            const toggle = document.querySelector('.license-toggle');
+            const content = document.getElementById('license-content');
+            toggle.classList.toggle('expanded');
+            content.classList.toggle('expanded');
+        }
+
+        async function loadLicense() {
+            try {
+                const response = await fetch('LICENSE.txt');
+                if (response.ok) {
+                    document.getElementById('license-text').textContent = await response.text();
+                }
+            } catch (e) {
+                document.getElementById('license-text').textContent = 'Failed to load license.';
+            }
+        }
+
+        loadLicense();
+    </script>
+</body>
+</html>
