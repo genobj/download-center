@@ -38,11 +38,12 @@ case "$OS" in
     ;;
 esac
 
-# latest.json 파싱
-DOWNLOAD_URL=$(curl -s "$JSON_URL" | grep -o "\"$PLATFORM\"[^}]*" | grep -o '"url"[[:space:]]*:[[:space:]]*"[^"]*"' | head -1 | cut -d'"' -f4)
+# latest.json 파싱 (순수 bash - jq/python 불필요)
+DOWNLOAD_URL=$(curl -s "$JSON_URL" | tr -d '\n\r ' | sed -n "s/.*\"${PLATFORM}\":{\"url\":\"\([^\"]*\)\".*/\1/p")
 
 if [ -z "$DOWNLOAD_URL" ]; then
   echo "Failed to get download URL for $PLATFORM"
+  echo "JSON URL: $JSON_URL"
   exit 1
 fi
 
