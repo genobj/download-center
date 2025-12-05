@@ -1,14 +1,14 @@
 Package: slv
-Version: 0.0.10-1
+Version: 0.0.11-1
 Architecture: amd64
 Maintainer: POLLUX.ai <dev@pollux.ai>
-Installed-Size: 1956
+Installed-Size: 2064
 Depends: libc6 (>= 2.34)
-Filename: linux/slv_0.0.10-beta_amd64.deb
-Size: 637316
-MD5sum: 7493ebd2b38dbe47191d3827873b7977
-SHA1: 6de73a08d5c69e0b776bccbc93806ece8e6fbd09
-SHA256: f80f12050280725aa4218197676868d36ed82ca517a49dcefed3d90f2f4cdaa6
+Filename: linux/slv_0.0.11-beta_amd64.deb
+Size: 647584
+MD5sum: 8cfb3bad5ae16c2edf86a72cb77d528c
+SHA1: 1b16124e36a50dc896b087454e3b597a03c57cb7
+SHA256: 55e5abb7d8c61211fbf1e72641807f96a8e16a31ad005185b96927be499b5f93
 Section: utils
 Priority: optional
 Homepage: https://github.com/genobj/ergon-sullivan
