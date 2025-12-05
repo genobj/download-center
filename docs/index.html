@@ -538,6 +538,7 @@
             check: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>`,
             terminal: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>`,
             package: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4 7.55 4.24"></path><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><line x1="12" y1="22" x2="12" y2="12"></line></svg>`,
+            trash: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>`,
         };
 
         function escapeHtml(text) {
@@ -558,17 +559,21 @@
             `;
         }
 
-        function createInstallPanel(appName, env, platform) {
+        function createInstallPanel(appName, env, platform, binaryName) {
             const isBeta = env === 'beta';
             const isLinux = platform === 'linux';
+            const isMacos = platform === 'macos';
             const repoPath = isBeta ? `${appName}-beta` : appName;
             
             const quickInstallCmd = `curl -fsSL https://genobj.github.io/download-center/${appName}/install.sh | bash${isBeta ? ' -s -- beta' : ''}`;
             const aptCmd = `echo "deb [trusted=yes] https://genobj.github.io/download-center/${repoPath} linux/" | sudo tee /etc/apt/sources.list.d/${repoPath}.list && sudo apt update`;
+            const uninstallLinuxCmd = `sudo apt remove ${binaryName}  # or: sudo dpkg -r ${binaryName}`;
+            const uninstallMacosCmd = `sudo rm /usr/local/bin/${binaryName}`;
             
             const panelId = `panel-${appName}-${env}-${platform}`;
             const quickId = `quick-${appName}-${env}-${platform}`;
             const aptId = `apt-${appName}-${env}-${platform}`;
+            const uninstallId = `uninstall-${appName}-${env}-${platform}`;
             
             let content = `
                 <div class="install-method">
@@ -582,6 +587,19 @@
                     <div class="install-method">
                         <div class="install-method-title">${icons.package} APT Repository (Debian/Ubuntu)</div>
                         ${createCodeBlock(aptCmd, aptId)}
+                    </div>
+                    <div class="install-method">
+                        <div class="install-method-title">${icons.trash} Uninstall</div>
+                        ${createCodeBlock(uninstallLinuxCmd, uninstallId)}
+                    </div>
+                `;
+            }
+            
+            if (isMacos) {
+                content += `
+                    <div class="install-method">
+                        <div class="install-method-title">${icons.trash} Uninstall</div>
+                        ${createCodeBlock(uninstallMacosCmd, uninstallId)}
                     </div>
                 `;
             }
@@ -624,7 +642,7 @@
             return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
         }
 
-        function createReleaseCard(appName, env, version, platformData, pubDate) {
+        function createReleaseCard(appName, env, version, platformData, pubDate, binaryName) {
             const isProduction = env === 'production';
             const badgeClass = isProduction ? 'badge-production' : 'badge-beta';
             const badgeText = isProduction ? 'Product' : 'Beta';
@@ -641,8 +659,8 @@
             `;
             
             const installPanels = `
-                ${createInstallPanel(appName, env, 'linux')}
-                ${createInstallPanel(appName, env, 'macos')}
+                ${createInstallPanel(appName, env, 'linux', binaryName)}
+                ${createInstallPanel(appName, env, 'macos', binaryName)}
             `;
 
             return `
@@ -758,10 +776,10 @@
                 releasesDiv.innerHTML = '';
 
                 const prodVersion = prodData?.version || '—';
-                releasesDiv.innerHTML += createReleaseCard(app.name, 'production', prodVersion, prodData?.platforms, prodData?.pub_date);
+                releasesDiv.innerHTML += createReleaseCard(app.name, 'production', prodVersion, prodData?.platforms, prodData?.pub_date, app.binary);
 
                 const betaVersion = betaData?.version || '—';
-                releasesDiv.innerHTML += createReleaseCard(app.name, 'beta', betaVersion, betaData?.platforms, betaData?.pub_date);
+                releasesDiv.innerHTML += createReleaseCard(app.name, 'beta', betaVersion, betaData?.platforms, betaData?.pub_date, app.binary);
             }
 
             container.innerHTML += `
