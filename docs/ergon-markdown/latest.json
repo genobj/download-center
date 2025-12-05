@@ -1,0 +1,21 @@
+{
+  "version": "0.0.0",
+  "notes": "No release yet",
+  "pub_date": "2025-12-05T00:00:00Z",
+  "platforms": {
+    "linux-x86_64": {
+      "url": "https://genobj.github.io/download-center/ergon-markdown/linux/ergon-markdown_0.0.0_amd64.deb",
+      "binary": "https://genobj.github.io/download-center/ergon-markdown/linux/ergon-markdown-linux-x64"
+    },
+    "darwin-x86_64": {
+      "url": "https://genobj.github.io/download-center/ergon-markdown/macos/ergon-markdown-macos-x64"
+    },
+    "darwin-aarch64": {
+      "url": "https://genobj.github.io/download-center/ergon-markdown/macos/ergon-markdown-macos-arm64"
+    },
+    "windows-x86_64": {
+      "url": "https://genobj.github.io/download-center/ergon-markdown/windows/ergon-markdown-windows-x64.exe"
+    }
+  }
+}
+
