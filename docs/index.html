@@ -567,13 +567,20 @@
             
             const quickInstallCmd = `curl -fsSL https://genobj.github.io/download-center/${appName}/install.sh | bash${isBeta ? ' -s -- beta' : ''}`;
             const aptCmd = `echo "deb [trusted=yes] https://genobj.github.io/download-center/${repoPath} linux/" | sudo tee /etc/apt/sources.list.d/${repoPath}.list && sudo apt update`;
-            const uninstallLinuxCmd = `sudo apt remove ${binaryName}  # or: sudo dpkg -r ${binaryName}`;
-            const uninstallMacosCmd = `sudo rm /usr/local/bin/${binaryName}`;
+            
+            // Linux uninstall commands
+            const removeLinuxCmd = `sudo apt remove ${binaryName}`;
+            const purgeLinuxCmd = `sudo apt purge ${binaryName} && rm -rf ~/.config/${binaryName}`;
+            
+            // macOS uninstall commands
+            const removeMacosCmd = `sudo rm /usr/local/bin/${binaryName}`;
+            const purgeMacosCmd = `sudo rm /usr/local/bin/${binaryName} && rm -rf ~/.config/${binaryName}`;
             
             const panelId = `panel-${appName}-${env}-${platform}`;
             const quickId = `quick-${appName}-${env}-${platform}`;
             const aptId = `apt-${appName}-${env}-${platform}`;
-            const uninstallId = `uninstall-${appName}-${env}-${platform}`;
+            const removeId = `remove-${appName}-${env}-${platform}`;
+            const purgeId = `purge-${appName}-${env}-${platform}`;
             
             let content = `
                 <div class="install-method">
@@ -589,8 +596,12 @@
                         ${createCodeBlock(aptCmd, aptId)}
                     </div>
                     <div class="install-method">
-                        <div class="install-method-title">${icons.trash} Uninstall</div>
-                        ${createCodeBlock(uninstallLinuxCmd, uninstallId)}
+                        <div class="install-method-title">${icons.trash} Remove (keep config)</div>
+                        ${createCodeBlock(removeLinuxCmd, removeId)}
+                    </div>
+                    <div class="install-method">
+                        <div class="install-method-title">${icons.trash} Purge (remove all)</div>
+                        ${createCodeBlock(purgeLinuxCmd, purgeId)}
                     </div>
                 `;
             }
@@ -598,8 +609,12 @@
             if (isMacos) {
                 content += `
                     <div class="install-method">
-                        <div class="install-method-title">${icons.trash} Uninstall</div>
-                        ${createCodeBlock(uninstallMacosCmd, uninstallId)}
+                        <div class="install-method-title">${icons.trash} Remove (keep config)</div>
+                        ${createCodeBlock(removeMacosCmd, removeId)}
+                    </div>
+                    <div class="install-method">
+                        <div class="install-method-title">${icons.trash} Purge (remove all)</div>
+                        ${createCodeBlock(purgeMacosCmd, purgeId)}
                     </div>
                 `;
             }
