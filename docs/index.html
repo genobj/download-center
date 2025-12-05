@@ -543,6 +543,15 @@
             return div.innerHTML;
         }
 
+        function escapeAttr(text) {
+            return text
+                .replace(/&/g, '&amp;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        }
+
         function createCodeBlock(code, id) {
             return `
                 <div class="code-block">
@@ -550,7 +559,7 @@
                     <button class="copy-btn" onclick="copyToClipboard('${id}', this)" title="Copy to clipboard">
                         ${icons.copy}
                     </button>
-                    <input type="hidden" id="${id}" value="${escapeHtml(code)}">
+                    <input type="hidden" id="${id}" value="${escapeAttr(code)}">
                 </div>
             `;
         }
