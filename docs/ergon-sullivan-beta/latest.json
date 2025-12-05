@@ -1,7 +1,7 @@
 {
   "version": "0.0.1-beta",
   "notes": "Beta release v0.0.1-beta",
-  "pub_date": "2025-12-05T10:56:51Z",
+  "pub_date": "2025-12-05T11:22:51Z",
   "platforms": {
     "linux-x86_64": {
       "url": "https://genobj.github.io/download-center/ergon-sullivan-beta/linux/slv_0.0.1-beta_amd64.deb",
@@ -16,7 +16,8 @@
       "signature": ""
     },
     "windows-x86_64": {
-      "url": "https://genobj.github.io/download-center/ergon-sullivan-beta/windows/slv-windows-x64.exe",
+      "url": "https://genobj.github.io/download-center/ergon-sullivan-beta/windows/slv-0.0.1-beta-setup.exe",
+      "binary": "https://genobj.github.io/download-center/ergon-sullivan-beta/windows/slv-windows-x64.exe",
       "signature": ""
     }
   }
