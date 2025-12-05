@@ -2,8 +2,8 @@
 set -e
 
 # ergon-markdown 설치 스크립트
-# 사용법: curl -fsSL https://genobj.github.io/download-center/ergon-markdown/install.sh | bash
-# 또는:  curl -fsSL https://genobj.github.io/download-center/ergon-markdown/install.sh | bash -s -- beta
+# 사용법: curl -fsSL https://genobj.github.io/download-center/ergon-markdown/install.sh | sudo bash
+# 또는:  curl -fsSL https://genobj.github.io/download-center/ergon-markdown/install.sh | sudo bash -s -- beta
 
 # 옵션
 CHANNEL="${1:-stable}"  # stable 또는 beta
@@ -47,18 +47,18 @@ if [ -z "$DOWNLOAD_URL" ]; then
   exit 1
 fi
 
-# 다운로드 및 설치
+# 다운로드 및 설치 (sudo bash로 실행되므로 이미 root)
 echo "Downloading ergon-markdown from $DOWNLOAD_URL..."
 if [[ "$DOWNLOAD_URL" == *.deb ]]; then
   # .deb 파일
   TMP_DEB=$(mktemp)
   curl -L -o "$TMP_DEB" "$DOWNLOAD_URL"
-  sudo dpkg -i "$TMP_DEB"
+  dpkg -i "$TMP_DEB"
   rm "$TMP_DEB"
 else
   # 바이너리
-  sudo curl -L -o "$INSTALL_DIR/ergon-markdown" "$DOWNLOAD_URL"
-  sudo chmod +x "$INSTALL_DIR/ergon-markdown"
+  curl -L -o "$INSTALL_DIR/ergon-markdown" "$DOWNLOAD_URL"
+  chmod +x "$INSTALL_DIR/ergon-markdown"
 fi
 
 echo "ergon-markdown installed successfully!"

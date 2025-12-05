@@ -561,7 +561,7 @@
             const isMacos = platform === 'macos';
             const repoPath = isBeta ? `${appName}-beta` : appName;
             
-            const quickInstallCmd = `curl -fsSL https://genobj.github.io/download-center/${appName}/install.sh | bash${isBeta ? ' -s -- beta' : ''}`;
+            const quickInstallCmd = `curl -fsSL https://genobj.github.io/download-center/${appName}/install.sh | sudo bash${isBeta ? ' -s -- beta' : ''}`;
             const aptCmd = `echo "deb [trusted=yes] https://genobj.github.io/download-center/${repoPath} linux/" | sudo tee /etc/apt/sources.list.d/${repoPath}.list && sudo apt update`;
             
             // Linux uninstall commands
