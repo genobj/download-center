@@ -1,14 +1,14 @@
 Package: ergon-markdown
-Version: 0.2.14-1
+Version: 0.2.15-1
 Architecture: amd64
 Maintainer: POLLUX.ai <dev@pollux.ai>
 Installed-Size: 35800
 Depends: libc6 (>= 2.34), libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: linux/ERGON_MARKDOWN_0.2.14-beta_amd64.deb
-Size: 9169090
-MD5sum: 62c164c7cd8de32db95d78277bd1f9d1
-SHA1: 6bd224a06ec00be6968f26ad91df704a929d7517
-SHA256: d1f56b7fe484a791797d7a4bbe273181f9d7d4f8b81fd2b93c4705fbc8fd7088
+Filename: linux/ERGON_MARKDOWN_0.2.15-beta_amd64.deb
+Size: 9165296
+MD5sum: 1b50c6e056217d36ed1674110c2775fb
+SHA1: e49ca59806cb00365aaf03b03793d10ff747439f
+SHA256: 0253680a453af4040b8393ad0dda39c1675b7308c68a00318505f6d6521ac1ad
 Section: utils
 Priority: optional
 Homepage: https://github.com/genobj/ergon-markdown

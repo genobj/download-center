@@ -1,9 +1,9 @@
 {
-  "version": "0.2.14-beta",
-  "notes": "Beta release 0.2.14-beta",
-  "pub_date": "2025-12-06T08:57:27Z",
+  "version": "0.2.15-beta",
+  "notes": "Beta release 0.2.15-beta",
+  "pub_date": "2025-12-06T09:34:50Z",
   "platforms": {
-    "linux-x86_64": { "url": "https://genobj.github.io/download-center/ergon-markdown-beta/releases/0.2.14-beta/ERGON_MARKDOWN_0.2.14-beta_amd64.deb", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTdXBsWThMS3h2WGFhb2J6UW0vN3N4cmpWR1FWdVlpaGdxeVQ2WGFoYVRhTlFjRXZqUzhmT3I4U2l5eEFWZ3FWWTJIS2xxUktJVGR1ZTFpRit5SitEcGhGNTdHTFN5dkFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY1MDExMTg5CWZpbGU6RVJHT05fTUFSS0RPV05fMC4yLjE0LWJldGFfYW1kNjQuZGViCmtRN3pxSndjSGRnVXg1angrUWFxNG5hanFxL05OZDUyTHM4dDBoM3ArYW40NHZjTFBQZllJYUVIVExidlBtYWhoLzhpb0RtSTJ2b1hqeGtDNnY2RENnPT0K" },
-    "windows-x86_64": { "url": "https://genobj.github.io/download-center/ergon-markdown-beta/releases/0.2.14-beta/ERGON_MARKDOWN_0.2.14-beta_x64-setup.exe", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTdXBsWThMS3h2WFZqdXR6bDhoMXNzQUhzVUVZZ3BNeGEzZCtvazd2QjZVVUgyK1JRUUhGczhGdTQ4T2lIMmw4VWFOQ1kxemR6OEZCR3cxUXhSNWNYK3ZnRHBQT0wyNlE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY1MDExNDMxCWZpbGU6RVJHT05fTUFSS0RPV05fMC4yLjE0LWJldGFfeDY0LXNldHVwLmV4ZQpReFl2QTR2NkxwVFBHZHNlOUpyelBwdjF1cTVacGRtZ1hHaXA2d0hhT21yU0VaWWdqcTJheEF1R0NOczJkVG5TR3IwSnVKVi9lTlQzUXJUMzhLUnBCZz09Cg==" }
+    "linux-x86_64": { "url": "https://genobj.github.io/download-center/ergon-markdown-beta/releases/0.2.15-beta/ERGON_MARKDOWN_0.2.15-beta_amd64.deb", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScHdibWV5a0RVcTNISGZkOENnYnp1ckc5OHlXWW5DTk9ESmJadzZ6c3FFWmJDQTdKN3Z1NncxVlNjVFRlL2FJZ01keFovZXRmRlI0Q1BZNjBPNVZQTE5kUjJWSjdqSWcwPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY1MDEzMzYyCWZpbGU6RVJHT05fTUFSS0RPV05fMC4yLjE1LWJldGFfYW1kNjQuZGViClJwU0FOa20zVHB3VzVScjlpK3VHYVNjM0l2OHNPNHJQa3czWDhsQ0hpcDhyMGZBRGhabVBCQnJGOUFodDZHbFNab2Z1eWpnSVRlMC9KOSsxQUFZT0N3PT0K" },
+    "windows-x86_64": { "url": "https://genobj.github.io/download-center/ergon-markdown-beta/releases/0.2.15-beta/ERGON_MARKDOWN_0.2.15-beta_x64-setup.exe", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScHdibWV5a0RVcTVsSmU3dEQzcWRkUW5HRGtpenpDLzZZRjJuRnRadmhVMFhLMk1UVkppeG45YldKREJyczZqM09MRGdxWjJxVHNHZ1E3WTkrZWY1clpQWUMrQkZhQUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY1MDEzNjcxCWZpbGU6RVJHT05fTUFSS0RPV05fMC4yLjE1LWJldGFfeDY0LXNldHVwLmV4ZQo4NkYvOVlULy9QWUZ2dEpxZUdyME8zRmJ4NzliMlQ4TGhIK1Z2Z2E1UDBMZ1FqZEVLVHlUc3FoZVZVbDI3bEVoZ1NBMlN0QTNwaUpVNE5vemF2MitCZz09Cg==" }
   }
 }
