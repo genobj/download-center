@@ -5,10 +5,10 @@ Maintainer: you
 Installed-Size: 9200
 Depends: libwebkit2gtk-4.1-0, libgtk-3-0, libwebkit2gtk-4.1-0, libgtk-3-0
 Filename: ./Ergon Bootcamp_0.1.0-beta_amd64.deb
-Size: 2892626
-MD5sum: fafbb353f04e359c4b42db62c31f12ab
-SHA1: eb174f882df6401364d3a62dfdd8114c607e8756
-SHA256: e8a54592670b2711b3f6d5673ae583c64a4723fff9608a9bca4ab68bd2cf6d88
+Size: 2892622
+MD5sum: c6fd816be029db5b4ea286ab9cd01e11
+SHA1: fd9528865690f2d3fc12f340713206d5a8eda5fd
+SHA256: 6b885d5b77b19beb9e300c6c24d11559d3cc113188e86fbf287241b622d70e34
 Priority: optional
 Description: A Tauri App
  (none)
