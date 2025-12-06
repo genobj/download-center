@@ -1,19 +1,18 @@
 Package: ergon-markdown
-Version: 0.2.12-1
+Version: 0.2.14-1
 Architecture: amd64
 Maintainer: POLLUX.ai <dev@pollux.ai>
 Installed-Size: 35800
 Depends: libc6 (>= 2.34), libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: linux/ERGON_MARKDOWN_0.2.12-beta_amd64.deb
-Size: 9164540
-MD5sum: 7686d648e8837840c24d0d12a0ee7dbf
-SHA1: 609e2082475738a1e40d474953127db6bb04be1a
-SHA256: 4a0a90c2359f74bc3d54e2d17c7b10451de0003bb5c5fd157e0ae9251a9c66e7
+Filename: linux/ERGON_MARKDOWN_0.2.14-beta_amd64.deb
+Size: 9169090
+MD5sum: 62c164c7cd8de32db95d78277bd1f9d1
+SHA1: 6bd224a06ec00be6968f26ad91df704a929d7517
+SHA256: d1f56b7fe484a791797d7a4bbe273181f9d7d4f8b81fd2b93c4705fbc8fd7088
 Section: utils
 Priority: optional
 Homepage: https://github.com/genobj/ergon-markdown
 Description: Tauri v2 기반 크로스 플랫폼 마크다운 뷰어
  ERGON MARKDOWN은 Markdown + Mermaid 다이어그램을 지원하는
  데스크톱 마크다운 뷰어입니다.
- 멀티 패널 레이아웃, 자동 업데이트, 다국어 지원을 제공합니다.
 
