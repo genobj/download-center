@@ -1,0 +1,9 @@
+{
+  "version": "0.2.15-beta",
+  "notes": "Beta release 0.2.15-beta",
+  "pub_date": "2025-12-11T06:00:54Z",
+  "platforms": {
+    "linux-x86_64": { "url": "https://genobj.github.io/download-center/ergon-markdown-staging/releases/0.2.15-beta/ERGON_MARKDOWN_0.2.15-beta_amd64.deb", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScHdibWV5a0RVcTB0RVk4WVJKMjFQeHlIZ0xMYzJ3RXB5MElVTlc5OUVkMldFRlpiUjdOdTY2Znd5eTljZkxpUjI5eC9ZSGNkcTYrN2dpMnNtSUp0TGt3RVEyKytqd0FBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY1NDMyNTY3CWZpbGU6RVJHT05fTUFSS0RPV05fMC4yLjE1LWJldGFfYW1kNjQuZGViCitMcER6KytXcjVFZk1MSXdoZjEyUm9aRWdZVUprUCtIRFBwbEJNSGFmU1RCTnFxTHRzelBEeXN6MlY1Q25WaWkzNFZaZkpZbjdWUWttUEE1YjNGeUNBPT0K" },
+    "windows-x86_64": { "url": "https://genobj.github.io/download-center/ergon-markdown-staging/releases/0.2.15-beta/ERGON_MARKDOWN_0.2.15-beta_x64-setup.exe", "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVScHdibWV5a0RVcXdFN2FNd0lKdzU4N2xUQWdmamdGcWVBUW5MWW4rTGMydm44bmFCdUJ5SmlPVDMxYTNlL1JHVG9mdk5wMS9NeVZrWmxSWjFSdlZVRFZqZG9ZRnJXcnc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzY1NDMyODMwCWZpbGU6RVJHT05fTUFSS0RPV05fMC4yLjE1LWJldGFfeDY0LXNldHVwLmV4ZQpUbnRlOG1WbzFoTkxsNURMZnBFZjBYWnB2eHFRR09EcHZBRC9GSVJQaTNWVDdYT2wrVitDWkYzLzNnelYwekR4Z3FwTEZOQUF2N1JQQ1NTU1gzemhBQT09Cg==" }
+  }
+}
