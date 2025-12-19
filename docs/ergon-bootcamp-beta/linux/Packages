@@ -2,13 +2,13 @@ Package: ergon-bootcamp
 Version: 0.1.0-beta
 Architecture: amd64
 Maintainer: you
-Installed-Size: 15254
+Installed-Size: 15252
 Depends: libwebkit2gtk-4.1-0, libgtk-3-0, libwebkit2gtk-4.1-0, libgtk-3-0
 Filename: ./ergon-bootcamp_0.1.0-beta_amd64.deb
-Size: 4842984
-MD5sum: bf75a016e71b4286f19bf8590e3fa9c5
-SHA1: 6142697ff5ee930f90a0b6b672381022f4fcb9d5
-SHA256: ddcb1e8c0243766655484f34221358b47513d98e2835755a92e5f77e0970f4bd
+Size: 4846588
+MD5sum: c5a5b2979d6476f1eada576d04fd83f8
+SHA1: 6e36c9355b240786f21bbb733ee97111a13d3523
+SHA256: 9dfe2c21b3f435d94e06ead420de302c9a425a2ec4deda12688aed5e6f0079be
 Priority: optional
 Description: A Tauri App
  (none)

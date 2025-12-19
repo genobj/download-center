@@ -1,7 +1,7 @@
 {
   "version": "0.1.0-beta",
   "notes": "Beta release 0.1.0-beta",
-  "pub_date": "2025-12-18T14:48:03Z",
+  "pub_date": "2025-12-19T04:12:49Z",
   "platforms": {
     "linux-x86_64": { "url": "https://genobj.github.io/download-center/ergon-bootcamp-beta/releases/0.1.0-beta/ergon-bootcamp_0.1.0-beta_amd64.deb", "signature": "" }
   }
