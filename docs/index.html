@@ -566,7 +566,7 @@
             `;
         }
 
-        function createInstallPanel(appName, env, platform, binaryName) {
+        function createInstallPanel(appName, env, platform, binaryName, configPaths) {
             const isBeta = env === 'beta';
             const isLinux = platform === 'linux';
             const isMacos = platform === 'macos';
@@ -578,13 +578,17 @@
             // Linux upgrade command
             const upgradeLinuxCmd = `sudo apt update && sudo apt upgrade ${binaryName}`;
             
+            // Config paths (from latest.json or fallback)
+            const linuxConfigPaths = configPaths?.linux || [`~/.config/${binaryName}`];
+            const macosConfigPaths = configPaths?.macos || [`~/.config/${binaryName}`];
+            
             // Linux uninstall commands
             const removeLinuxCmd = `sudo apt remove ${binaryName}`;
-            const purgeLinuxCmd = `sudo apt purge ${binaryName} && rm -rf ~/.config/${binaryName}`;
+            const purgeLinuxCmd = `sudo apt purge ${binaryName} && rm -rf ${linuxConfigPaths.join(' ')}`;
             
             // macOS uninstall commands
             const removeMacosCmd = `sudo rm /usr/local/bin/${binaryName}`;
-            const purgeMacosCmd = `sudo rm /usr/local/bin/${binaryName} && rm -rf ~/.config/${binaryName}`;
+            const purgeMacosCmd = `sudo rm /usr/local/bin/${binaryName} && rm -rf ${macosConfigPaths.join(' ')}`;
             
             const panelId = `panel-${appName}-${env}-${platform}`;
             const quickId = `quick-${appName}-${env}-${platform}`;
@@ -672,7 +676,7 @@
             return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
         }
 
-        function createReleaseCard(appName, env, version, platformData, pubDate, binaryName) {
+        function createReleaseCard(appName, env, version, platformData, pubDate, binaryName, configPaths) {
             const isProduction = env === 'production';
             const badgeClass = isProduction ? 'badge-production' : 'badge-beta';
             const badgeText = isProduction ? 'Product' : 'Beta';
@@ -689,8 +693,8 @@
             `;
             
             const installPanels = `
-                ${createInstallPanel(appName, env, 'linux', binaryName)}
-                ${createInstallPanel(appName, env, 'macos', binaryName)}
+                ${createInstallPanel(appName, env, 'linux', binaryName, configPaths)}
+                ${createInstallPanel(appName, env, 'macos', binaryName, configPaths)}
             `;
 
             return `
@@ -806,10 +810,10 @@
                 releasesDiv.innerHTML = '';
 
                 const prodVersion = prodData?.version || '—';
-                releasesDiv.innerHTML += createReleaseCard(app.name, 'production', prodVersion, prodData?.platforms, prodData?.pub_date, app.binary);
+                releasesDiv.innerHTML += createReleaseCard(app.name, 'production', prodVersion, prodData?.platforms, prodData?.pub_date, app.binary, prodData?.config_paths);
 
                 const betaVersion = betaData?.version || '—';
-                releasesDiv.innerHTML += createReleaseCard(app.name, 'beta', betaVersion, betaData?.platforms, betaData?.pub_date, app.binary);
+                releasesDiv.innerHTML += createReleaseCard(app.name, 'beta', betaVersion, betaData?.platforms, betaData?.pub_date, app.binary, betaData?.config_paths);
             }
 
             container.innerHTML += `
