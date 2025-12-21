@@ -1,3 +1,19 @@
+Package: boot-camp
+Version: 0.1.0-beta
+Architecture: amd64
+Maintainer: POLLUX.ai
+Installed-Size: 23728
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0, libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: ./Boot Camp_0.1.0-beta_amd64.deb
+Size: 8143764
+MD5sum: 241f58d90885396469c9f63eb95741df
+SHA1: 96e2962a9b5803a9957a7e7624c82d0a98276c02
+SHA256: 3e0a081b19098e248245512e5d0750d645b1c74d4234152295da9149cf518a73
+Priority: optional
+Homepage: https://pollux.ai
+Description: Linux learning and setup companion
+ Boot Camp helps new Linux users set up their development environment and learn through interactive games.
+
 Package: ergon-bootcamp
 Version: 0.1.0-beta
 Architecture: amd64
