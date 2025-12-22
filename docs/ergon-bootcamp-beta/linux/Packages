@@ -4,7 +4,7 @@ Architecture: amd64
 Maintainer: POLLUX.ai
 Installed-Size: 23727
 Depends: libwebkit2gtk-4.1-0, libgtk-3-0, libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: Boot Camp_0.1.1-beta_amd64.deb
+Filename: linux/Boot Camp_0.1.1-beta_amd64.deb
 Size: 8147128
 MD5sum: 2fc6e2fe193e9d4e97d2c95ec39c7a83
 SHA1: 74148b5179fd13d76e9b05ffca63ee802a174135
@@ -15,16 +15,16 @@ Description: Linux learning and setup companion
  Boot Camp helps new Linux users set up their development environment and learn through interactive games. Powered by POLLUX.ai.
 
 Package: ergon-bootcamp
-Version: 0.1.7-beta
+Version: 0.1.8-beta
 Architecture: amd64
 Maintainer: POLLUX.ai
-Installed-Size: 24587
+Installed-Size: 24589
 Depends: libwebkit2gtk-4.1-0, libgtk-3-0, libwebkit2gtk-4.1-0, libgtk-3-0
-Filename: ergon-bootcamp_0.1.7-beta_amd64.deb
-Size: 8479450
-MD5sum: 2f83dc8997e10e287a87de13b01408b5
-SHA1: 273b953ed5912328435f57cde3edb24b584df897
-SHA256: b2c305ef683ce2545e626eb7c45daac2d858dfd779c7d616cd5b55a7f8ac5778
+Filename: linux/ergon-bootcamp_0.1.8-beta_amd64.deb
+Size: 8474858
+MD5sum: 79df18a2406cac252e28d087f2e637af
+SHA1: 2b799fa0b4db161914b8041df7304da6dc34dc81
+SHA256: d11d3ea20e591c078a4d3ca108fca258cf2bdab72c297c831274188e0ee69f6a
 Priority: optional
 Homepage: https://pollux.ai
 Description: Linux learning and setup companion
