@@ -1,0 +1,82 @@
+POLLUX.ai General License (Version 1.0)
+
+Copyright (c) 2025 POLLUX.ai. All rights reserved.
+
+IMPORTANT NOTICE: Access to or receipt of this program (including via external distribution) does not itself grant any rights to use it. Rights to use are granted only as expressly set forth below and only to Authorized Users (as defined below).
+
+1. Definitions
+   “Affiliate” means an entity that directly or indirectly controls, is controlled by, or is under common control with a party.
+   “Authorized User” means (i) the customer entity expressly identified as the authorized licensee in a Separate Agreement, and (ii) such customer entity’s employees, solely to the extent acting on behalf of the customer entity and within the scope of the Separate Agreement.
+   For clarity, a customer entity’s Affiliates, contractors, consultants, vendors, service providers, and other third parties are not Authorized Users unless they are expressly identified as authorized in the Separate Agreement.
+   “Program” means this software program and any related source code, object code/binaries, documentation, materials, updates, and components made available by POLLUX.ai.
+   “Separate Agreement” means a separate written agreement executed by POLLUX.ai and the user (including a signed order form, enterprise agreement, or partner agreement) that explicitly permits use of the Program.
+
+2. Ownership
+   All ownership rights in and to the Program and all intellectual property rights therein are and shall remain with POLLUX.ai and its licensors.
+   This license does not transfer ownership and does not grant the user any intellectual property rights except the limited rights expressly granted in Section 3.
+
+3. Limited License Grant (Authorized Users Only)
+   Subject to continuous compliance with this license and the applicable Separate Agreement, POLLUX.ai grants an Authorized User a limited, revocable, non-exclusive, non-transferable, non-sublicensable right to use the Program solely for the purposes and within the scope expressly stated in the Separate Agreement.
+   Any use outside the scope of the Separate Agreement is prohibited.
+
+4. No License for Non-Authorized Users
+   If you are not an Authorized User, no license or other rights are granted to you under this license, and you must not use, copy, modify, distribute, sell, or otherwise exploit the Program in any manner.
+   For clarity, external distribution or availability of the Program (including any public download center or other public distribution channel) does not grant a license.
+
+5. Use Restrictions
+   Authorized Users may not do any of the following, except to the extent expressly permitted in applicable mandatory law:
+   a) Attempt to reverse engineer, decompile, or disassemble any object code/binary portion of the Program.
+   b) Redistribute, resell, or sublicense any part or all of the Program to any third party.
+   c) Use the Program for commercial purposes unless separately authorized in writing by POLLUX.ai.
+   d) Use the Program to engage in illegal, improper, or infringing activities, or in any manner that violates applicable law.
+   e) Remove, obscure, or alter proprietary notices (including copyright notices) on the Program.
+
+6. Confidentiality (Non-Public Materials)
+   To the extent the Program or any portion of it is provided to an Authorized User on a non-public basis (including private builds, credentials, keys, or non-public documentation), such non-public information constitutes “Confidential Information.”
+   The Authorized User shall protect Confidential Information using at least reasonable care and shall not disclose it to any third party except as expressly permitted in the Separate Agreement.
+   Confidential Information does not include information that is (i) publicly available through no breach by the Authorized User, or (ii) independently developed without use of Confidential Information.
+
+7. Public Source Releases; Open Source Components
+   POLLUX.ai may, at its sole discretion, make certain source code or components publicly available (including in public repositories) under separate terms.
+   If any portion of the Program is expressly provided under an open-source license (as identified in the applicable repository, source headers, or accompanying notices), the terms of that open-source license govern that portion, and this license does not restrict rights granted under that open-source license for that portion.
+   Except for any portion expressly provided under an open-source license, no rights to use the Program are granted except to Authorized Users under a Separate Agreement.
+
+8. Feedback
+   If you provide feedback, suggestions, or ideas regarding the Program (“Feedback”), you grant POLLUX.ai a perpetual, irrevocable, worldwide, royalty-free right to use, modify, and incorporate the Feedback without restriction and without compensation, provided that POLLUX.ai is not required to identify you as the source of Feedback.
+
+9. Third-Party Components
+   The Program may include or depend on third-party software, components, or materials (“Third-Party Components”). Third-Party Components may be subject to separate license terms, which shall govern your use of those Third-Party Components to the extent they apply.
+
+10. Disclaimer of Warranty
+   THE PROGRAM IS PROVIDED “AS IS” AND “AS AVAILABLE,” WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, POLLUX.ai DISCLAIMS ALL WARRANTIES, INCLUDING WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
+
+11. Limitation of Liability
+   TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL POLLUX.ai BE LIABLE FOR ANY DAMAGES, LOSSES, COSTS, CLAIMS, LAWSUITS, LEGAL LIABILITIES, OR ISSUES OF ANY KIND ARISING FROM OR RELATED TO THE PROGRAM OR ITS USE OR INABILITY TO USE,
+   INCLUDING, WITHOUT LIMITATION, DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES.
+
+   This includes, without limitation:
+   - Loss or corruption of data
+   - Loss of revenue or business opportunities
+   - System malfunction or failure
+   - Security breaches or leakage of personal information
+   - Damages to third parties
+
+12. Indemnification
+   The user agrees to indemnify and hold harmless POLLUX.ai, its officers, employees, agents, Affiliates, and licensors from and against any and all claims, damages, liabilities,
+   costs, and expenses (including reasonable attorneys’ fees) arising out of or related to the use, misuse, disclosure, or inability to use the Program, or violation of this license.
+
+13. Termination
+   If the user violates any provision of this license or any applicable Separate Agreement, POLLUX.ai may terminate this license immediately.
+   Upon termination, the user must immediately cease use of the Program and destroy all copies in its possession or control, except as otherwise required by applicable law or a separate written agreement with POLLUX.ai.
+
+14. Notices / Contact
+   For inquiries and legal notices relating to this license, please contact POLLUX.ai.
+
+15. Miscellaneous
+   a) This license shall be interpreted and governed in accordance with the laws of the Republic of Korea.
+   b) If any provision of this license is held invalid or unenforceable, the remaining provisions shall remain in full force and effect.
+   c) POLLUX.ai may amend this license without prior notice, and the amended license shall apply from the time it is posted on the POLLUX.ai website, unless a separate written agreement provides otherwise.
+   d) This license constitutes the entire agreement between POLLUX.ai and the user regarding the Program and supersedes all prior or contemporaneous agreements on this subject matter, except that any Separate Agreement shall control to the extent of any conflict.
+   e) The user may not assign or transfer any rights or obligations under this license without POLLUX.ai’s prior written consent.
+   f) Sections that by their nature should survive termination (including Ownership, Confidentiality, Feedback, Disclaimer of Warranty, Limitation of Liability, Indemnification, and Miscellaneous) shall survive.
