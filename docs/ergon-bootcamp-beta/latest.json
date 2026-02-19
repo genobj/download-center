@@ -1,9 +1,9 @@
 {
-  "version": "0.1.13-beta",
-  "notes": "Beta release 0.1.13-beta",
-  "pub_date": "2026-02-19T01:45:03Z",
+  "version": "0.1.14-beta",
+  "notes": "Beta release 0.1.14-beta",
+  "pub_date": "2026-02-19T09:33:35Z",
   "platforms": {
-    "linux-x86_64": { "url": "https://genobj.github.io/download-center/ergon-bootcamp-beta/releases/0.1.13-beta/ergon-bootcamp_0.1.13-beta_amd64.deb", "signature": "" }
+    "linux-x86_64": { "url": "https://genobj.github.io/download-center/ergon-bootcamp-beta/releases/0.1.14-beta/ergon-bootcamp_0.1.14-beta_amd64.deb", "signature": "" }
   },
   "config_paths": {
     "linux": ["~/.config/Pollux/BootCamp", "~/.config/Pollux/GameLibrary"]
