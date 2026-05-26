@@ -1,0 +1,11 @@
+{
+  "version": "0.1.11",
+  "notes": "Production release 0.1.11",
+  "pub_date": "2026-05-26T04:36:56Z",
+  "platforms": {
+    "linux-x86_64": { "url": "https://genobj.github.io/download-center/ergon-bootcamp/releases/0.1.11/ergon-bootcamp_0.1.11_amd64.deb", "signature": "" }
+  },
+  "config_paths": {
+    "linux": ["~/.config/Pollux/BootCamp", "~/.config/Pollux/GameLibrary"]
+  }
+}

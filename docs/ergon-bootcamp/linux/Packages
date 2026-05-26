@@ -1,0 +1,16 @@
+Package: ergon-bootcamp
+Version: 0.1.11
+Architecture: amd64
+Maintainer: POLLUX.ai
+Installed-Size: 14087
+Depends: libwebkit2gtk-4.1-0, libgtk-3-0, libwebkit2gtk-4.1-0, libgtk-3-0
+Filename: linux/ergon-bootcamp_0.1.11_amd64.deb
+Size: 5772024
+MD5sum: 5741250f0fc951fde9eb64437e57d254
+SHA1: 6afeab6d133d2350999db63d30e8f5a5e843471e
+SHA256: 3edb0e50f6f9672c52abf55e9fd8729725730244556e524789197623de9cf042
+Priority: optional
+Homepage: https://pollux.ai
+Description: Linux learning and setup companion
+ Boot Camp helps new Linux users set up their development environment and learn through interactive games. Powered by POLLUX.ai.
+
